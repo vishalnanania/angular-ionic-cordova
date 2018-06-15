@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { AlertController } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
+import { UsersPage } from '../users/users';
 
 @Component({
   selector: 'page-home',
@@ -7,16 +8,11 @@ import { AlertController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public alerCtrl: AlertController) {
+  constructor(public navCtrl: NavController) {
   }
 
-  doAlert() {
-    let alert = this.alerCtrl.create({
-      title: 'New Friend!',
-      message: 'Hello, Vishal Nananiya',
-      buttons: ['Ok']
-    });
-    alert.present()
+  goToUsers(){
+    this.navCtrl.push(UsersPage);
   }
 
 }
