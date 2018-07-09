@@ -7,7 +7,7 @@ import { UsersPage } from '../users/users';
   templateUrl: 'home.html'
 })
 export class HomePage {
-
+  usersPage = UsersPage;
   constructor(public navCtrl: NavController) {
   }
 

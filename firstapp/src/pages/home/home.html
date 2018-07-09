@@ -5,5 +5,6 @@
 </ion-header>
 
 <ion-content padding>
-  <button ion-button (click)="goToUsers()">Users</button>
+  <!-- <button ion-button (click)="goToUsers()">Users</button> -->
+  <button ion-button [navPush]="usersPage">Users</button>
 </ion-content>
