@@ -19,8 +19,9 @@ export class UsersPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad UsersPage');
+  ionViewCanEnter() : boolean | Promise<boolean> {
+    console.log('ionViewCanEnter UsersPage');
+    return Math.random() < 0.5; 
   }
 
   onLoadUser(name: string){

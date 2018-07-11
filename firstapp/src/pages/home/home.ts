@@ -12,7 +12,10 @@ export class HomePage {
   }
 
   goToUsers(){
-    this.navCtrl.push(UsersPage);
+    this.navCtrl.push(UsersPage)
+      .catch((error) => {
+        console.log("Access denied", error);
+      });
   }
 
 }
