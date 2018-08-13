@@ -42,4 +42,12 @@ export class QuotesPage {
     });
     alert.present();
   }
+
+  isFavorite(quote: Quote) {
+    return this.quotesService.isQuoteFavorite(quote);
+  }
+
+  onRemoveFromFavorite(quote: Quote) {
+    this.quotesService.removeQuoteFromFavorites(quote);
+  }
 }
